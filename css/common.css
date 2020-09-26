@@ -3,4 +3,12 @@ body {
   background-color: black;
   color: wheat;
 }
+
+#slideshow01 {
+  text-align: center;
+}
+
+#slideshow01 img {
+  margin: 40px 0;
+}
 /*# sourceMappingURL=common.css.map */

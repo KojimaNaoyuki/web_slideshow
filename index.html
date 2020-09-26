@@ -10,5 +10,34 @@
     <section id="slideshow01">
         <img src="" alt="show" id="id_img1">
     </section>
+
+    <!-- //////////////////////////////////////////////////////////////////////// -->
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            (function() {
+
+                //単純なスライドショー
+
+                let parts_src = ['img/img1.jpg', 'img/img2.jpg', 'img/img3.jpg'];
+                let num = 0;
+
+                function slideShow() {
+                    console.log(num);
+
+                    if(num == 2) {
+                        num = 0;
+                    } else {
+                        num++;
+                    }
+
+                    document.getElementById('id_img1').src = parts_src[num];
+                }
+
+                slideShow();
+                setInterval(slideShow, 2000);
+            }).call(this);
+        }, false);
+    </script>
 </body>
 </html>
