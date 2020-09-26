@@ -1,3 +1,26 @@
+.circle {
+  float: left;
+  width: 20px;
+  height: 20px;
+  margin: 0 1px;
+  border-radius: 50%;
+  border: solid 1px white;
+}
+
+.circle-current {
+  float: left;
+  width: 20px;
+  height: 20px;
+  margin: 0 1px;
+  border-radius: 50%;
+  border: solid 1px white;
+  background-color: white;
+}
+
+.content {
+  margin: 20px 300px;
+}
+
 body {
   margin: 0;
   background-color: black;
@@ -9,6 +32,21 @@ body {
 }
 
 #slideshow01 img {
-  margin: 40px 0;
+  display: block;
+  margin: 40px auto;
+}
+
+#slideshow02 {
+  text-align: center;
+}
+
+#slideshow02 img {
+  display: block;
+  margin: 40px auto;
+}
+
+#slideshow02 p {
+  text-align: center;
+  margin: 0 200px;
 }
 /*# sourceMappingURL=common.css.map */

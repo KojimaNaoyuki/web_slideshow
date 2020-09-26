@@ -11,6 +11,11 @@
         <img src="" alt="show" id="id_img1">
     </section>
 
+    <section id="slideshow02">
+        <img src="" alt="show" id="id_img2">
+        <div class="content"><div class="circle"></div><div class="circle"></div><div class="circle"></div></div>
+    </section>
+
     <!-- //////////////////////////////////////////////////////////////////////// -->
 
     <script>
@@ -32,6 +37,46 @@
                     }
 
                     document.getElementById('id_img1').src = parts_src[num];
+                }
+
+                slideShow();
+                setInterval(slideShow, 2000);
+            }).call(this);
+
+
+            (function() {
+                let parts_src = ['img/img1.jpg', 'img/img2.jpg', 'img/img3.jpg'];
+                let num = 0;
+                let elem = document.getElementsByClassName('circle');
+
+                function slideShow() {
+                    console.log(num);
+                    
+                    switch (num) {
+                        case 0 : 
+                            elem[0].classList.add('circle-current');
+                            elem[1].classList.remove('circle-current');
+                            elem[2].classList.remove('circle-current');
+                            break;
+                        case 1 : 
+                            elem[0].classList.remove('circle-current');
+                            elem[1].classList.add('circle-current');
+                            elem[2].classList.remove('circle-current');
+                            break;
+                        case 2 : 
+                            elem[0].classList.remove('circle-current');
+                            elem[1].classList.remove('circle-current');
+                            elem[2].classList.add('circle-current');
+                            break;   
+                    }
+
+                    if(num == 2) {
+                        num = 0;
+                    } else {
+                        num++;
+                    }
+
+                    document.getElementById('id_img2').src = parts_src[num];
                 }
 
                 slideShow();
